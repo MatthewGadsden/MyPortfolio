@@ -1,0 +1,25 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  flex-grow: 1;
+}
+
+li a {
+  display: block;
+  color: lightblue;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+li a:hover {
+  transform: scale(1.3);
+}
