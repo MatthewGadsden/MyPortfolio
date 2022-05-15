@@ -9,9 +9,6 @@ const darkTheme = createTheme({
       dark: '#090909',
       contrastText: '#fefefe',
     },
-    secondary: {
-      // main: '#F50057'
-    }
   },
   spacing: (factor) => `${0.1 * factor}rem`,
 })
