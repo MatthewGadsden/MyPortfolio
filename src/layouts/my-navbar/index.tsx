@@ -33,7 +33,7 @@ const ListElement = styled.li`
     text-align: center;
     padding: ${props => props.theme.spacing(4)};
     text-decoration: none;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
     font-size: 18px;
   };
   a:hover {
