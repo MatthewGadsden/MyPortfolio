@@ -8,6 +8,6 @@ const lightTheme = createTheme({
     }
   },
   spacing: (factor) => `${0.1 * factor}rem`,
-})
+});
 
 export default lightTheme;
