@@ -25,8 +25,8 @@
 ### 💻 Quick Setup
 1) Clone Repository
 ```shell
-git clone https://github.com/MatthewGadsden/myPortfolio.git
-cd ./myPortfolio
+git clone https://github.com/MatthewGadsden/MyPortfolio.git
+cd ./MyPortfolio
 ```
 2) Make sure you have gatsby npm package
 ```shell
