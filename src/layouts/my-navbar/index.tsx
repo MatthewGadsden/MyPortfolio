@@ -72,8 +72,8 @@ const MyNavbar = (props: MyNavbarProps) => {
             <ListElement><Link to="/">Home</Link></ListElement>
             <ListElement><Link to="/about">About</Link></ListElement>
             <ListElement><Link to="/portfolio">Portfolio</Link></ListElement>
-            <ListElement><Link to="/resume">Resume</Link></ListElement>
-
+            <ListElement><Link to="/experience">Experience</Link></ListElement>
+            
             <ListElement><Switch onChange={handleModeChange}/></ListElement>
           </ul>
         </Navbar>

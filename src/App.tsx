@@ -10,10 +10,14 @@ import './App.css';
 import MyNavbar from "./layouts/my-navbar";
 import Home from "./pages/home";
 import Portfolio from './pages/portfolio';
-import Resume from './pages/resume';
+import Experience from './pages/experience';
 import About from './pages/about';
+import styled from 'styled-components';
 
 
+const Body = styled.body`
+background-color: ${props => props.theme.palette.primary.main};
+`
 
 
 function App() {
@@ -22,13 +26,15 @@ function App() {
   return (
     <MuiThemeProvider theme={darkTheme}>
       <StyledThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+        <Body>
         <MyNavbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/portfolio" element={<Portfolio />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/resume" element={<Resume />}/>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/portfolio" element={<Portfolio />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/experience" element={<Experience />}/>
+          </Routes>
+        </Body>
       </StyledThemeProvider>
     </MuiThemeProvider>
   );
