@@ -5,7 +5,19 @@ import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import './navbar.css';
 
-const Navbar = styled.nav `
+const NavbarWrapper = styled.div`
+  background-color: ${props => props.theme.palette.primary.main};
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0px;
+  right: 0px;
+  float: none;
+  overflow: auto;
+`
+
+const Navbar = styled.nav`
   position: fixed;
   top: ${props => (props.theme.spacing(10))};
   right: 10%;
@@ -17,7 +29,7 @@ const ListElement = styled.li`
   flex-grow: 1;
   a {
     display: block;
-    color: ${props => props.theme.palette.primary.main};
+    color: ${props => props.theme.palette.primary.contrastText};
     text-align: center;
     padding: ${props => props.theme.spacing(4)};
     text-decoration: none;
@@ -26,7 +38,12 @@ const ListElement = styled.li`
   };
   a:hover {
     transform: scale(1.3);
+    color: ${props => props.theme.palette.secondary.main};
   };
+`
+
+const NameHeader = styled.h1`
+  color: ${props => props.theme.palette.primary.contrastText};
 `
 
 // eslint-disable-next-line
@@ -48,8 +65,8 @@ const MyNavbar = (props: MyNavbarProps) => {
   };
 
   return (
-    <div className='top-of-nav'>
-        <h1>Matthew Gadsden</h1>
+    <NavbarWrapper>
+        <NameHeader>Matthew Gadsden</NameHeader>
         <Navbar>
           <ul>
             <ListElement><Link to="/">Home</Link></ListElement>
@@ -57,10 +74,10 @@ const MyNavbar = (props: MyNavbarProps) => {
             <ListElement><Link to="/portfolio">Portfolio</Link></ListElement>
             <ListElement><Link to="/resume">Resume</Link></ListElement>
 
-            <ListElement><Switch color="primary" onChange={handleModeChange}/></ListElement>
+            <ListElement><Switch onChange={handleModeChange}/></ListElement>
           </ul>
         </Navbar>
-    </div>
+    </NavbarWrapper>
   );
 } 
 
