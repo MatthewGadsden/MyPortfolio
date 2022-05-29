@@ -19,7 +19,6 @@ const Body = styled.body`
 background-color: ${props => props.theme.palette.primary.main};
 `
 
-
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
