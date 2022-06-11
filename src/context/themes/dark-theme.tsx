@@ -11,8 +11,16 @@ const darkTheme = createTheme({
       contrastText: '#fefefe',
     },
     secondary: {
-      main: '#C1956D'
-    }
+      main: '#C1956D',
+      light: '#D2AE93',
+      dark: '#A57D58',
+      contrastText: '#fefefe'
+    },
+    common: {
+      black: '#000',
+      white: '#FFF',
+    },
+
   },
   spacing: (factor) => `${0.1 * factor}rem`,
 });

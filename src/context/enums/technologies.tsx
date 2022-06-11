@@ -1,7 +1,5 @@
-export enum Technologies {
+export enum TechEnum {
   React,
-  ReactNative,
-  ReactRouter,
   Java,
   JavaScript,
   Python,
