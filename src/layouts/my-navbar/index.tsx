@@ -6,7 +6,8 @@ import styled, { css } from 'styled-components';
 import './navbar.css';
 
 const NavbarWrapper = styled.div`
-  background-color: ${props => props.theme.palette.primary.main};
+  display: flex;
+  background-color: ${props => props.theme.palette.primary.dark};
   width: 100%;
   height: 100%;
   margin: 0;
@@ -15,14 +16,26 @@ const NavbarWrapper = styled.div`
   right: 0px;
   float: none;
   overflow: auto;
+  
+
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-grow: 1;
+  nav:last-of-type {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 500px){
+    flex-direction: row;
+    margin-left: 0;
+  }
 `;
 
 const Navbar = styled.nav`
-  position: fixed;
-  top: ${props => (props.theme.spacing(10))};
-  right: 10%;
+  display: flex;
   width: 30rem;
   text-align: center;
+  justify-content: flex-end;
 `;
 
 const ListElement = styled.li`
@@ -43,7 +56,12 @@ const ListElement = styled.li`
 `;
 
 const NameHeader = styled.h1`
+  margin: 0 5% 0 0;
   color: ${props => props.theme.palette.primary.contrastText};
+
+  @media screen and (min-width: 500px){
+    margin: 0 0 0 5%;
+  }
 `;
 
 interface MyNavbarProps {
