@@ -13,12 +13,7 @@ import Home from "./pages/home";
 import Portfolio from './pages/portfolio';
 import Experience from './pages/experience';
 import About from './pages/about';
-import styled from 'styled-components';
 
-
-const Body = styled.body`
-background-color: ${props => props.theme.palette.primary.main};
-`
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
