@@ -15,7 +15,7 @@ const NavbarWrapper = styled.div`
   right: 0px;
   float: none;
   overflow: auto;
-`
+`;
 
 const Navbar = styled.nav`
   position: fixed;
@@ -23,7 +23,7 @@ const Navbar = styled.nav`
   right: 10%;
   width: 30rem;
   text-align: center;
-`
+`;
 
 const ListElement = styled.li`
   flex-grow: 1;
@@ -40,11 +40,11 @@ const ListElement = styled.li`
     transform: scale(1.3);
     color: ${props => props.theme.palette.secondary.main};
   };
-`
+`;
 
 const NameHeader = styled.h1`
   color: ${props => props.theme.palette.primary.contrastText};
-`
+`;
 
 interface MyNavbarProps {
   isDarkMode: boolean, 
@@ -71,6 +71,6 @@ const MyNavbar = (props: MyNavbarProps) => {
         </Navbar>
     </NavbarWrapper>
   );
-} 
+};
 
-export default MyNavbar
+export default MyNavbar;
