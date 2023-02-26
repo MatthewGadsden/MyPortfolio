@@ -4,6 +4,10 @@
     url("./assets/fonts/cream-DEMO.ttf") format("truetype");
 }
 
+body {
+  margin: 0%;
+}
+
 * {
   font-family: Cream;
 }

@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core';
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
 import lightTheme from './context/themes/light-theme';
 import darkTheme from './context/themes/dark-theme';
 import './App.css';
@@ -24,17 +25,17 @@ function App() {
 
   return (
     <MuiThemeProvider theme={darkTheme}>
-      <StyledThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-        <Body>
-        <MyNavbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+      <BrowserRouter>
+        <StyledThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+          <MyNavbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/portfolio" element={<Portfolio />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/experience" element={<Experience />}/>
           </Routes>
-        </Body>
-      </StyledThemeProvider>
+        </StyledThemeProvider>
+      </BrowserRouter>
     </MuiThemeProvider>
   );
 }
