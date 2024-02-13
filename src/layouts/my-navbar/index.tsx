@@ -16,7 +16,6 @@ const NavbarWrapper = styled.div`
   right: 0px;
   float: none;
   overflow: auto;
-  
 
   flex-direction: row-reverse;
   align-items: center;
